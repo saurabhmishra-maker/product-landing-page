@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - Product Landing Page</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Shop<span>Ease</span>
+            </div>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="small-title">WELCOME TO SHopease</p>
+
+            <h1>
+                Quality Products at
+                <span>Best Prices</span>
+            </h1>
+
+            <p>
+                Shop smartphones, laptops, headphones and
+                grocery products from one place.
+            </p>
+
+            <a href="#products" class="hero-btn">
+                Explore Products
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <div class="hero-card">
+                🛍️
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="products-section" id="products">
+
+        <div class="section-heading">
+            <p>OUR PRODUCTS</p>
+            <h2>Choose Your Product</h2>
+            <span>
+                Select a product and choose your preferred variant.
+            </span>
+        </div>
+
+
+        <div class="product-grid">
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card">
+
+                <div class="product-image phone">
+                    📱
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Smartphone
+                    </span>
+
+                    <h3>SmartPhone X</h3>
+
+                    <p>
+                        Powerful smartphone with a beautiful
+                        display and long-lasting battery.
+                    </p>
+
+                    <label for="phoneVariant">
+                        Select Variant
+                    </label>
+
+                    <select id="phoneVariant" class="variant">
+                        <option value="29999">128GB - ₹29,999</option>
+                        <option value="34999">256GB - ₹34,999</option>
+                        <option value="39999">512GB - ₹39,999</option>
+                    </select>
+
+                    <div class="price">
+                        ₹<span id="phonePrice">29999</span>
+                    </div>
+
+                    <div class="quantity">
+                        <button onclick="changeQuantity('phone', -1)">−</button>
+                        <span id="phoneQuantity">1</span>
+                        <button onclick="changeQuantity('phone', 1)">+</button>
+                    </div>
+
+                    <p class="total">
+                        Total: ₹<span id="phoneTotal">29999</span>
+                    </p>
+
+                    <button
+                        class="buy-btn"
+                        onclick="selectProduct('SmartPhone X')">
+                        Enquire Now
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div class="product-card">
+
+                <div class="product-image laptop">
+                    💻
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Laptop
+                    </span>
+
+                    <h3>ProBook Laptop</h3>
+
+                    <p>
+                        Fast and reliable laptop for work,
+                        study and entertainment.
+                    </p>
+
+                    <label for="laptopVariant">
+                        Select Variant
+                    </label>
+
+                    <select id="laptopVariant" class="variant">
+                        <option value="54999">8GB / 512GB - ₹54,999</option>
+                        <option value="64999">16GB / 512GB - ₹64,999</option>
+                        <option value="74999">16GB / 1TB - ₹74,999</option>
+                    </select>
+
+                    <div class="price">
+                        ₹<span id="laptopPrice">54999</span>
+                    </div>
+
+                    <div class="quantity">
+                        <button onclick="changeQuantity('laptop', -1)">−</button>
+                        <span id="laptopQuantity">1</span>
+                        <button onclick="changeQuantity('laptop', 1)">+</button>
+                    </div>
+
+                    <p class="total">
+                        Total: ₹<span id="laptopTotal">54999</span>
+                    </p>
+
+                    <button
+                        class="buy-btn"
+                        onclick="selectProduct('ProBook Laptop')">
+                        Enquire Now
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div class="product-card">
+
+                <div class="product-image headphones">
+                    🎧
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Headphones
+                    </span>
+
+                    <h3>SoundMax Headphones</h3>
+
+                    <p>
+                        Wireless headphones with powerful bass,
+                        clear sound and comfortable design.
+                    </p>
+
+                    <label for="headphoneVariant">
+                        Select Variant
+                    </label>
+
+                    <select id="headphoneVariant" class="variant">
+                        <option value="1999">Basic - ₹1,999</option>
+                        <option value="2999">Pro - ₹2,999</option>
+                        <option value="3999">Premium - ₹3,999</option>
+                    </select>
+
+                    <div class="price">
+                        ₹<span id="headphonePrice">1999</span>
+                    </div>
+
+                    <div class="quantity">
+                        <button onclick="changeQuantity('headphone', -1)">−</button>
+                        <span id="headphoneQuantity">1</span>
+                        <button onclick="changeQuantity('headphone', 1)">+</button>
+                    </div>
+
+                    <p class="total">
+                        Total: ₹<span id="headphoneTotal">1999</span>
+                    </p>
+
+                    <button
+                        class="buy-btn"
+                        onclick="selectProduct('SoundMax Headphones')">
+                        Enquire Now
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div class="product-card">
+
+                <div class="product-image grocery">
+                    🛒
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Groceries
+                    </span>
+
+                    <h3>Daily Grocery Pack</h3>
+
+                    <p>
+                        Essential grocery items for your
+                        everyday household needs.
+                    </p>
+
+                    <label for="groceryVariant">
+                        Select Pack
+                    </label>
+
+                    <select id="groceryVariant" class="variant">
+                        <option value="499">Small Pack - ₹499</option>
+                        <option value="899">Medium Pack - ₹899</option>
+                        <option value="1499">Large Pack - ₹1,499</option>
+                    </select>
+
+                    <div class="price">
+                        ₹<span id="groceryPrice">499</span>
+                    </div>
+
+                    <div class="quantity">
+                        <button onclick="changeQuantity('grocery', -1)">−</button>
+                        <span id="groceryQuantity">1</span>
+                        <button onclick="changeQuantity('grocery', 1)">+</button>
+                    </div>
+
+                    <p class="total">
+                        Total: ₹<span id="groceryTotal">499</span>
+                    </p>
+
+                    <button
+                        class="buy-btn"
+                        onclick="selectProduct('Daily Grocery Pack')">
+                        Enquire Now
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+
+        <div>
+            <p class="small-title">WHY CHOOSE US</p>
+
+            <h2>
+                Everything You Need
+                in One Place
+            </h2>
+
+            <p>
+                ShopEase provides quality products at competitive
+                prices with a simple and convenient shopping experience.
+            </p>
+        </div>
+
+        <div class="features">
+
+            <div>
+                <span>🚚</span>
+                <h3>Fast Delivery</h3>
+                <p>Quick and reliable delivery.</p>
+            </div>
+
+            <div>
+                <span>🔒</span>
+                <h3>Secure Shopping</h3>
+                <p>Your information is protected.</p>
+            </div>
+
+            <div>
+                <span>⭐</span>
+                <h3>Quality Products</h3>
+                <p>Products you can trust.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT / FORM ================= -->
+    <section class="contact" id="contact">
+
+        <div class="section-heading">
+            <p>CONTACT US</p>
+            <h2>Product Enquiry</h2>
+
+            <span>
+                Fill in the form and our team will contact you.
+            </span>
+        </div>
+
+
+        <form id="enquiryForm">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name">
+
+                <small id="nameError"></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email">
+
+                <small id="emailError"></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter 10 digit mobile number">
+
+                <small id="phoneError"></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="selectedProduct">
+                    Product
+                </label>
+
+                <input
+                    type="text"
+                    id="selectedProduct"
+                    placeholder="Select product above"
+                    readonly>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="4"
+                    placeholder="Write your enquiry"></textarea>
+
+            </div>
+
+
+            <button type="submit" class="submit-btn">
+                Submit Enquiry
+            </button>
+
+            <div id="successMessage"></div>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div class="logo">
+            Shop<span>Ease</span>
+        </div>
+
+        <p>
+            © 2026 ShopEase. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
